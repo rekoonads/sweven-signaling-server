@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/thinkonmay/signaling-server/protocol"
-	"github.com/thinkonmay/thinkremote-rtchub/signalling/gRPC/packet"
+	"github.com/thinkonmay/signaling-server/signalling/gRPC/packet"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 )

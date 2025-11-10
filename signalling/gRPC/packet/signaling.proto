@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package packet;
+
+option go_package = "github.com/thinkonmay/signaling-server/signalling/gRPC/packet";
+
+// SignalingType defines the type of signaling message
+enum SignalingType {
+    tSTART = 0;
+    tSDP = 1;
+    tICE = 2;
+}
+
+// SDPMessage contains SDP (Session Description Protocol) data
+message SDPMessage {
+    string sdp = 1;
+}
+
+// ICEMessage contains ICE (Interactive Connectivity Establishment) candidate data
+message ICEMessage {
+    string candidate = 1;
+    string sdpMid = 2;
+    int32 sdpMLineIndex = 3;
+}
+
+// SignalingMessage is the main message structure for WebRTC signaling
+message SignalingMessage {
+    SignalingType type = 1;
+    SDPMessage sdp = 2;
+    ICEMessage ice = 3;
+}
+
+// Signaling service definition
+service Signaling {
+    // Handshake establishes a bidirectional stream for signaling messages
+    rpc Handshake(stream SignalingMessage) returns (stream SignalingMessage);
+}

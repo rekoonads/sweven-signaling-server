@@ -1,6 +1,6 @@
 package protocol
 
-import "github.com/thinkonmay/thinkremote-rtchub/signalling/gRPC/packet"
+import "github.com/thinkonmay/signaling-server/signalling/gRPC/packet"
 
 type Tenant interface {
 	Send(*packet.SignalingMessage)

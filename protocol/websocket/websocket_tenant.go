@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/gorilla/websocket"
-	"github.com/thinkonmay/thinkremote-rtchub/signalling/gRPC/packet"
+	"github.com/thinkonmay/signaling-server/signalling/gRPC/packet"
 )
 
 type WebsocketTenant struct {

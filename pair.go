@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/thinkonmay/signaling-server/protocol"
-	"github.com/thinkonmay/thinkremote-rtchub/signalling/gRPC/packet"
+	"github.com/thinkonmay/signaling-server/signalling/gRPC/packet"
 )
 
 type Pair struct {
